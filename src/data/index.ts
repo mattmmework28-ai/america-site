@@ -27,9 +27,10 @@ export const serviceItems = [
         description:
           "Set on 145 acres along Long Island's renowned Gold Coast, Artistry offers a refined event experience within the historic Frick Estate at the Nassau County Museum of Art. Surrounded by curated art exhibitions, formal English gardens, and striking outdoor sculptures, this venue provides a sophisticated and inspiring backdrop for corporate receptions, fundraisers, and exclusive gatherings.",
         images: [
-          "/service-photo/Artistry/1.jpeg",
+          "/service-photo/Artistry/1.png",
           "/service-photo/Artistry/2.jpeg",
-          "/service-photo/Artistry/3.jpg",
+          "/service-photo/Artistry/3.jpeg",
+          "/service-photo/Artistry/4.png",
         ],
         buttonText: "Learn More",
         buttonLink: "https://www.eventsatartistry.com/",

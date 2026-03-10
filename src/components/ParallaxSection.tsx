@@ -22,10 +22,10 @@ const ParallaxSection: React.FC = () => {
         <source src="/videos/video.mp4" type="video/mp4" />
       </video>
 
-      <div className="relative z-10 h-full flex items-center justify-center">
-        <h2 className="text-white text-4xl text-center md:text-6xl font-light tracking-wide drop-shadow-xl uppercase font-primary">
-          SPRING
-          <br /> INTO THE CELEBRATION
+      <div className="relative z-10 h-full flex items-center justify-center px-6 sm:px-10 lg:px-16">
+        <h2 className="text-white text-center font-light tracking-wide drop-shadow-xl uppercase font-primary text-xl sm:text-2xl md:text-3xl lg:text-4xl max-w-7xl leading-relaxed">
+          Where meaningful gatherings come to life with strategic precision,
+          seamless execution, and lasting impact.
         </h2>
       </div>
     </section>
