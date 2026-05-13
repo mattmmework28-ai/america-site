@@ -1,0 +1,30 @@
+---
+description: Ensure image assets are copied and referenced correctly
+alwaysApply: true
+---
+
+# Image Placement Workflow
+
+When replacing or adding UI images, follow this exact sequence:
+
+1. Confirm the UI code path first (for this project usually `src/data/index.ts`).
+2. Copy assets into `public/` using deterministic names (`1.png`, `2.png`, etc.) in the target folder.
+3. Make `images` entries match **exact filenames and extensions** (`.png` vs `.jpg`).
+4. If a list references 4 items, ensure all 4 files exist; otherwise reduce the list to existing files.
+5. Verify each referenced path exists before finishing.
+
+## Project-specific conventions
+
+- Public path mapping: `public/foo/bar.png` -> `/foo/bar.png`
+- Common carousel folders:
+  - `/service-photo/MME Audio VIsual/`
+  - `/service-photo/Creative Partners Custom Fabrication/`
+  - `/service-photo/...` (other sections)
+- Navbar background image should be `public/nav_bg.png` and referenced as `/nav_bg.png`.
+
+## Completion checks (required)
+
+- Do not claim success until:
+  - all referenced files can be opened from disk, and
+  - code references point to the same extension and filename.
+- If assets are missing, state exactly which files are missing and stop.

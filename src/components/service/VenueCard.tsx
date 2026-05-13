@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import type { SectionItem } from "./types";
+import { DecoratedTitle } from "../DecoratedTitle";
 
 interface VenueCardProps {
   item: SectionItem;
@@ -46,7 +47,7 @@ export const VenueCard: React.FC<VenueCardProps> = ({ item, isImageLeft }) => {
 
   const contentSection = (
     <div className="flex w-full flex-col justify-center bg-white p-6 sm:p-8 lg:p-10 xl:p-12">
-      <a className="mb-4 lg:mb-6" href={item.buttonLink}>
+      <a className="mb-4 lg:mb-6 block" href={item.buttonLink}>
         {item.logo ? (
           <img
             src={item.logo}
@@ -54,9 +55,11 @@ export const VenueCard: React.FC<VenueCardProps> = ({ item, isImageLeft }) => {
             className={`w-auto object-contain ${logoHeight}`}
           />
         ) : (
-          <span className="text-xl font-bold text-gray-900 sm:text-2xl lg:text-3xl">
-            {item.logo_text}
-          </span>
+          <DecoratedTitle size="md" align="left" as="h3">
+            <span className="text-xl font-bold text-gray-900 sm:text-2xl lg:text-3xl">
+              {item.logo_text}
+            </span>
+          </DecoratedTitle>
         )}
       </a>
 
@@ -68,7 +71,7 @@ export const VenueCard: React.FC<VenueCardProps> = ({ item, isImageLeft }) => {
         href={item.buttonLink}
         target="_blank"
         rel="noopener noreferrer"
-        className="mt-6 inline-block w-fit bg-black px-6 py-2.5 text-sm font-semibold text-primary transition-opacity duration-300 hover:opacity-90 uppercase"
+        className="mt-6 inline-block w-fit bg-button-gradient px-6 py-2.5 text-sm font-semibold text-dark-black uppercase"
       >
         {item.buttonText}
       </a>
@@ -77,7 +80,7 @@ export const VenueCard: React.FC<VenueCardProps> = ({ item, isImageLeft }) => {
 
   const imageSection = (
     <div className="relative h-[300px] w-full sm:h-[350px] lg:h-full lg:min-h-[400px]">
-      <div className="relative h-full overflow-hidden bg-black">
+      <div className="relative h-full overflow-hidden bg-white">
         <AnimatePresence>
           <motion.img
             key={normalizedIndex}
@@ -119,12 +122,12 @@ export const VenueCard: React.FC<VenueCardProps> = ({ item, isImageLeft }) => {
       {isImageLeft ? (
         <>
           <div className="order-1 lg:order-2">{contentSection}</div>
-          <div className="order-2 lg:order-1">{imageSection}</div>
+          <div className="order-2 lg:order-1 lg:pr-[50px]">{imageSection}</div>
         </>
       ) : (
         <>
           <div className="order-1 lg:order-1">{contentSection}</div>
-          <div className="order-2 lg:order-2">{imageSection}</div>
+          <div className="order-2 lg:order-2 lg:pl-[120px]">{imageSection}</div>
         </>
       )}
     </div>

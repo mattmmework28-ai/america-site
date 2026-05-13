@@ -2,12 +2,32 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #d2b371;
+  --color-primary: #1B5E20;
+  --color-primary-light: #2E7D32;
+  --color-summer-teal: #00897B;
+  --color-summer-coral: #FF6B6B;
+  --color-gold-light: #D4AF37;
+  --color-soft-olive: #D2D270;
+  --color-soft-olive-dark: #c9c761;
+  --color-fresh-green: #A8C97A;
   --color-whitesmoke: #f5f5f5;
   --color-white: #ffffff;
 
   --color-dark-black: #0a0a0a;
   --font-primary: "Gilda Display", serif;
+}
+
+.bg-primary-gradient {
+  background: linear-gradient(90deg, #c9c761 0%, #d2d270 50%, #c9c761 100%);
+}
+
+.bg-button-gradient {
+  background: linear-gradient(90deg, #d2d270 0%, #a8c97a 100%);
+  transition: filter 300ms ease;
+}
+
+.bg-button-gradient:hover {
+  filter: brightness(0.93);
 }
 
 html {

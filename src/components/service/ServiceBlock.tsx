@@ -3,6 +3,7 @@
 import React from "react";
 import type { ServiceData } from "./types";
 import { VenueCard } from "./VenueCard";
+import { DecoratedTitle } from "../DecoratedTitle";
 
 interface ServiceBlockProps {
   data: ServiceData;
@@ -24,9 +25,11 @@ export const ServiceBlock: React.FC<ServiceBlockProps> = ({ data }) => {
               className={`w-auto object-contain ${logoHeight}`}
             />
           ) : (
-            <span className="text-2xl font-bold text-gray-900 sm:text-3xl lg:text-4xl">
-              {data.logo_text}
-            </span>
+            <DecoratedTitle size="lg" as="h2">
+              <span className="text-2xl font-bold text-gray-900 sm:text-3xl lg:text-4xl">
+                {data.logo_text}
+              </span>
+            </DecoratedTitle>
           )}
         </div>
 
@@ -46,13 +49,13 @@ export const ServiceBlock: React.FC<ServiceBlockProps> = ({ data }) => {
           href={data.buttonLink}
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-6 inline-block bg-black px-8 py-3 text-md font-semibold text-primary uppercase transition-opacity duration-300 hover:opacity-90 lg:mt-8"
+          className="mt-6 inline-block bg-button-gradient px-8 py-3 text-md font-semibold text-dark-black uppercase lg:mt-8"
         >
           {data.ctaButtonText}
         </a>
       </div>
 
-      <div className="bg-primary z-10 h-1"></div>
+      <div className="bg-primary-gradient z-10 h-1"></div>
 
       <div className="grid grid-cols-1">
         {data.section.map((item, index) => (
@@ -60,7 +63,7 @@ export const ServiceBlock: React.FC<ServiceBlockProps> = ({ data }) => {
         ))}
       </div>
 
-      <div className="bg-primary z-10 h-1"></div>
+      <div className="bg-primary-gradient z-10 h-1"></div>
     </div>
   );
 };

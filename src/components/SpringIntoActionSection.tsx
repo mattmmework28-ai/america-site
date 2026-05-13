@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import { DecoratedTitle } from "./DecoratedTitle";
 
 interface SpringIntoActionSectionProps {}
 
@@ -12,14 +13,14 @@ export const SpringIntoActionSection: React.FC<
       <div className="mx-auto max-w-2xl text-center">
         <div className="flex flex-col items-center">
           <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-gray-500">
-            Spring into Celebrating
+            Celebrate Summer in Style
           </p>
 
-          <div className="mt-3 h-px w-8 bg-primary" />
-
-          <h2 className="mt-4 text-2xl font-bold leading-tight text-gray-900 sm:text-3xl lg:text-[2rem]">
-            Spring into Action
-          </h2>
+          <DecoratedTitle size="lg" as="h2" className="mt-4">
+            <span className="text-2xl font-bold leading-tight text-gray-900 sm:text-3xl lg:text-[2rem]">
+              Summer Has Arrived
+            </span>
+          </DecoratedTitle>
         </div>
 
         <div className="mt-6 space-y-3 text-sm leading-relaxed text-gray-600 sm:text-base">

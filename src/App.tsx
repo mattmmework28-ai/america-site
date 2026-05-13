@@ -10,9 +10,9 @@ const App: React.FC = () => {
     <>
       <Navbar />
       <ParallaxSection />
-      <div className="bg-primary z-10 h-1.5"></div>
+      <div className="bg-primary-gradient z-10 h-1"></div>
       <SpringIntoActionSection />
-      <div className="bg-primary z-10 h-1.5"></div>
+      <div className="bg-primary-gradient z-10 h-1"></div>
       <ServiceSection items={serviceItems} />
       <Footer />
     </>

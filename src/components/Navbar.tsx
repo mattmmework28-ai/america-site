@@ -20,7 +20,7 @@ const Navbar: React.FC = () => {
           >
             <img
               src="/logo.png"
-              alt="Spring Into The Celebration"
+              alt="Summer Celebrations Begin Here"
               className="h-18 md:h-22 xl:h-26 w-auto"
             />
           </a>
@@ -28,7 +28,7 @@ const Navbar: React.FC = () => {
       </nav>
 
       <div
-        className="fixed left-0 right-0 z-10 h-0.5 bg-primary"
+        className="fixed left-0 right-0 z-10 h-0.5 bg-primary-gradient"
         style={{ top: "112px" }}
       />
     </>
