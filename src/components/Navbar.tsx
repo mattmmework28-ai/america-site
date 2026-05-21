@@ -4,17 +4,17 @@ const Navbar: React.FC = () => {
   return (
     <>
       <nav
-        className="fixed top-0 left-0 right-0 z-50 border-b border-black/10 shadow-sm"
-        style={{
-          backgroundColor: "#faf6f0",
-          backgroundImage: "url('/nav_bg.png')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-          height: "151px",
-        }}
+        className="fixed top-0 left-0 right-0 z-50 overflow-hidden border-b border-black/10 bg-[#faf6f0] shadow-sm"
+        style={{ height: "151px" }}
       >
-        <div className="flex h-full items-center justify-center px-6">
+        <img
+          src="/nav_bg.png"
+          alt=""
+          aria-hidden
+          decoding="async"
+          className="pointer-events-none absolute bottom-0 left-1/2 w-full max-w-[1920px] -translate-x-1/2 select-none"
+        />
+        <div className="relative z-10 flex h-full items-center justify-center px-6">
           <a
             href="https://www.fidihospitality.com/"
             className="flex h-full w-full max-w-[1920px] items-center justify-center focus:outline-none focus-visible:ring-2 focus-visible:ring-white/80 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent"
