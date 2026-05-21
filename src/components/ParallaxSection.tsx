@@ -36,7 +36,7 @@ const ParallaxSection: React.FC = () => {
             Where timeless gatherings are brought to life through history,
             craftsmanship, connection, and unforgettable experiences.
           </p>
-          <p className="mx-auto w-full max-w-7xl font-primary text-[1.2rem] font-light leading-relaxed tracking-wide text-white sm:text-[1.35rem] md:text-[1.5rem] lg:text-[1.8rem]">
+          <p className="mx-auto w-full max-w-7xl font-primary text-[1.2rem] font-light leading-relaxed tracking-wide text-primary sm:text-[1.35rem] md:text-[1.5rem] lg:text-[1.8rem]">
             Honoring tradition. Creating moments. Bringing people together.
           </p>
         </div>
