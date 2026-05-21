@@ -9,6 +9,8 @@ const Navbar: React.FC = () => {
           alt=""
           aria-hidden
           decoding="async"
+          fetchPriority="high"
+          loading="eager"
           className="pointer-events-none absolute inset-x-0 bottom-0 mx-auto block h-full w-full max-w-[1920px] object-cover object-bottom"
         />
         <div className="navbar-flag-overlay pointer-events-none absolute inset-0 z-[1]" aria-hidden />

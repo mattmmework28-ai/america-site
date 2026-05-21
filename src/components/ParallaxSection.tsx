@@ -10,13 +10,22 @@ const ParallaxSection: React.FC = () => {
         parallax-bg
       "
     >
+      <img
+        src="/videos/hero-poster.jpg"
+        alt=""
+        aria-hidden
+        decoding="async"
+        fetchPriority="high"
+        className="absolute inset-0 h-full w-full object-cover"
+      />
       <video
         className="absolute inset-0 h-full w-full object-cover"
         autoPlay
         loop
         muted
         playsInline
-        preload="auto"
+        poster="/videos/hero-poster.jpg"
+        preload="metadata"
       >
         <source src="/videos/video.mp4" type="video/mp4" />
       </video>
