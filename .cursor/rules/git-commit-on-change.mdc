@@ -1,0 +1,57 @@
+---
+description: Commit all site changes to git before finishing any agent task
+alwaysApply: true
+---
+
+# Commit Site Changes to Git
+
+Every agent session that modifies this project **must** commit those changes to git before finishing. This overrides any general "only commit when asked" guidance for this repository.
+
+## When to commit
+
+Commit when you have changed any project file, including:
+
+- Source code (`src/**`)
+- Styles (`src/index.css`, etc.)
+- Data/content (`src/data/**`)
+- Public assets (`public/**`)
+- Cursor config (`.cursor/**`) when intentionally updated
+
+Do **not** finish a task with uncommitted changes unless the user explicitly asked you not to commit.
+
+## Commit workflow (required)
+
+Run these in parallel before committing:
+
+1. `git status` — see untracked and modified files
+2. `git diff` — review staged and unstaged changes
+3. `git log -5 --oneline` — match existing commit message style
+
+Then, sequentially:
+
+1. Stage relevant files (never stage secrets like `.env`)
+2. Commit with a concise 1–2 sentence message focused on **why**
+3. Run `git status` to confirm a clean working tree for the files you changed
+
+Use a HEREDOC for the commit message:
+
+```bash
+git commit -m "$(cat <<'EOF'
+Brief summary of why these changes were made.
+
+EOF
+)"
+```
+
+## Safety rules
+
+- Never update git config
+- Never use destructive git commands unless explicitly requested
+- Never skip hooks (`--no-verify`) unless explicitly requested
+- Never force-push to main/master unless explicitly requested
+- Do not push unless the user asks
+- Do not commit `.env`, credentials, or other secret files
+
+## Before responding to the user
+
+If you edited files in this session, verify `git status` is clean (or only contains unrelated files the user asked you to leave uncommitted). If changes remain, commit them before your final reply.
