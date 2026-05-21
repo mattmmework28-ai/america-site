@@ -18,6 +18,32 @@
 
   --color-dark-black: #0a0a0a;
   --font-primary: "Gilda Display", serif;
+
+  --navbar-height: 118px;
+}
+
+@media (min-width: 640px) {
+  :root {
+    --navbar-height: 152px;
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --navbar-height: 191px;
+  }
+}
+
+.navbar-shell {
+  height: var(--navbar-height);
+}
+
+.navbar-divider {
+  top: var(--navbar-height);
+}
+
+.navbar-offset {
+  margin-top: calc(var(--navbar-height) + 2px);
 }
 
 .bg-primary-gradient {
