@@ -13,7 +13,7 @@ export const SpringIntoActionSection: React.FC<
       <div className="mx-auto max-w-2xl min-w-0 text-center">
         <div className="flex min-w-0 flex-col items-center">
           <DecoratedTitle size="md" as="h2">
-            <span className="text-xl font-bold leading-tight text-primary sm:text-2xl">
+            <span className="text-xl font-bold leading-tight text-gray-900 sm:text-2xl">
               Built on Heritage. Designed for Connection
             </span>
           </DecoratedTitle>
