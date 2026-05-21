@@ -56,7 +56,7 @@ export const VenueCard: React.FC<VenueCardProps> = ({ item, isImageLeft }) => {
           />
         ) : (
           <DecoratedTitle size="md" align="left" as="h3">
-            <span className="text-xl font-bold text-primary sm:text-2xl lg:text-3xl">
+            <span className="text-xl font-bold text-gray-900 sm:text-2xl lg:text-3xl">
               {item.logo_text}
             </span>
           </DecoratedTitle>

@@ -15,7 +15,7 @@ export const Footer: React.FC = () => {
               href="https://www.instagram.com/fidi_hospitality/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-400 transition-colors duration-300 hover:text-primary"
+              className="text-gray-400 transition-colors duration-300 hover:text-white"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
               aria-label="Instagram"

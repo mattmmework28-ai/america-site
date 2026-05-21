@@ -26,7 +26,7 @@ export const ServiceBlock: React.FC<ServiceBlockProps> = ({ data }) => {
             />
           ) : (
             <DecoratedTitle size="lg" as="h2">
-              <span className="text-2xl font-bold text-primary sm:text-3xl lg:text-4xl">
+              <span className="text-2xl font-bold text-gray-900 sm:text-3xl lg:text-4xl">
                 {data.logo_text}
               </span>
             </DecoratedTitle>
@@ -40,7 +40,7 @@ export const ServiceBlock: React.FC<ServiceBlockProps> = ({ data }) => {
 
         {data.ctaText ? (
           <p className="mx-auto mt-6 max-w-3xl min-w-0 break-words text-sm sm:text-base lg:mt-8 lg:text-lg [overflow-wrap:anywhere]">
-            <span className="font-semibold text-primary">
+            <span className="font-semibold text-gray-900">
               {data.ctaText.split(",")[0]},
             </span>
             {data.ctaText.split(",").slice(1).join(",")}
