@@ -12,9 +12,9 @@ interface DecoratedTitleProps {
 }
 
 const PART_HEIGHT: Record<DecoratedTitleSize, string> = {
-  sm: "h-7 sm:h-8 lg:h-9",
-  md: "h-9 sm:h-11 lg:h-12",
-  lg: "h-11 sm:h-14 lg:h-16",
+  sm: "h-14 sm:h-16 lg:h-20",
+  md: "h-20 sm:h-24 lg:h-28",
+  lg: "h-24 sm:h-28 lg:h-36",
 };
 
 const GAP_TO_TITLE: Record<DecoratedTitleSize, string> = {
@@ -39,7 +39,7 @@ const Flourish: React.FC<FlourishProps> = ({ heightClass, mirrored = false }) =>
     alt=""
     aria-hidden="true"
     draggable={false}
-    className={`${heightClass} max-w-[min(112px,33vw)] w-auto shrink-0 object-contain select-none sm:max-w-none ${
+    className={`${heightClass} max-w-[min(240px,45vw)] w-auto shrink-0 object-contain select-none sm:max-w-none ${
       mirrored ? "-scale-x-100" : ""
     }`}
   />

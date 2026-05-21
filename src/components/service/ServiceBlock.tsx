@@ -51,7 +51,7 @@ export const ServiceBlock: React.FC<ServiceBlockProps> = ({ data }) => {
           href={data.buttonLink}
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-6 inline-block bg-button-gradient px-8 py-3 text-md font-semibold text-primary uppercase lg:mt-8"
+          className="mt-6 inline-block bg-button-gradient px-8 py-3 text-md font-semibold text-white uppercase lg:mt-8"
         >
           {data.ctaButtonText}
         </a>
