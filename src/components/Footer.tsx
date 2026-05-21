@@ -7,7 +7,7 @@ export const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="w-full bg-primary text-gray-200">
+    <footer className="w-full bg-gray-900 text-gray-300">
       <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
         <div className="flex flex-col items-center justify-center space-y-6">
           <div className="flex items-center gap-6">
@@ -15,7 +15,7 @@ export const Footer: React.FC = () => {
               href="https://www.instagram.com/fidi_hospitality/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-300 transition-colors duration-300 hover:text-gold-light"
+              className="text-gray-400 transition-colors duration-300 hover:text-primary"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
               aria-label="Instagram"

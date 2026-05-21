@@ -16,7 +16,7 @@ export const ServiceBlock: React.FC<ServiceBlockProps> = ({ data }) => {
 
   return (
     <div>
-      <div className="bg-whitesmoke px-4 py-4 text-center sm:px-6 sm:py-8 lg:px-12 lg:py-12">
+      <div className="bg-gray-50 px-4 py-4 text-center sm:px-6 sm:py-8 lg:px-12 lg:py-12">
         <div className="mb-6 flex justify-center lg:mb-8">
           {data.logo ? (
             <img
@@ -51,13 +51,13 @@ export const ServiceBlock: React.FC<ServiceBlockProps> = ({ data }) => {
           href={data.buttonLink}
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-6 inline-block bg-button-gradient px-8 py-3 text-md font-semibold text-dark-black uppercase lg:mt-8"
+          className="mt-6 inline-block bg-black px-8 py-3 text-md font-semibold text-primary uppercase transition-opacity duration-300 hover:opacity-90 lg:mt-8"
         >
           {data.ctaButtonText}
         </a>
       </div>
 
-      <div className="bg-primary-gradient z-10 h-1"></div>
+      <div className="bg-primary z-10 h-1"></div>
 
       <div className="grid grid-cols-1">
         {data.section.map((item, index) => (
@@ -65,7 +65,7 @@ export const ServiceBlock: React.FC<ServiceBlockProps> = ({ data }) => {
         ))}
       </div>
 
-      <div className="bg-primary-gradient z-10 h-1"></div>
+      <div className="bg-primary z-10 h-1"></div>
     </div>
   );
 };

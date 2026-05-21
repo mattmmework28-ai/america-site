@@ -2,42 +2,16 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #1b5e20;
-  --color-primary-light: #2e7d32;
-  --color-summer-teal: #00897b;
-  --color-summer-coral: #ff6b6b;
+  --color-primary: #d2b371;
+  --color-primary-light: #e0c88a;
   --color-gold-light: #d4af37;
-  --color-soft-olive: #d2d270;
-  --color-soft-olive-dark: #c9c761;
-  --color-fresh-green: #a8c97a;
   --color-whitesmoke: #f5f5f5;
   --color-white: #ffffff;
-
   --color-dark-black: #0a0a0a;
   --font-primary: "Gilda Display", serif;
 
-  --navbar-flag-ratio: 5.838;
-  --navbar-height: min(
-    calc(min(100vw, 1920px) / var(--navbar-flag-ratio) + var(--navbar-text-space)),
-    191px
-  );
+  --navbar-height: 151px;
   --navbar-total-height: calc(var(--navbar-height) + 2px);
-}
-
-:root {
-  --navbar-text-space: 5.5rem;
-}
-
-@media (min-width: 640px) {
-  :root {
-    --navbar-text-space: 3rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  :root {
-    --navbar-text-space: 3.025rem;
-  }
 }
 
 .navbar-shell {
@@ -52,44 +26,12 @@
   height: var(--navbar-total-height);
 }
 
-.navbar-offset {
-  margin-top: var(--navbar-total-height);
-}
-
-.navbar-header-text span {
+.navbar-header-text {
   paint-order: stroke fill;
-  -webkit-text-stroke: 0.03em rgba(255, 255, 255, 0.45);
+  -webkit-text-stroke: 0.02em rgba(255, 255, 255, 0.35);
   text-shadow:
-    0 0 10px rgba(255, 255, 255, 0.28),
-    0 1px 2px rgba(255, 255, 255, 0.2);
-}
-
-.navbar-flag-overlay {
-  background: linear-gradient(
-    180deg,
-    rgba(4, 10, 22, 0.92) 0%,
-    rgba(6, 16, 32, 0.82) 40%,
-    rgba(8, 24, 48, 0.68) 72%,
-    rgba(10, 30, 58, 0.45) 100%
-  );
-  box-shadow:
-    inset 0 0 18px rgba(0, 0, 0, 0.82),
-    inset 0 4px 14px rgba(0, 0, 0, 0.72),
-    inset 0 10px 28px rgba(0, 0, 0, 0.65),
-    inset 0 -6px 18px rgba(0, 0, 0, 0.55);
-}
-
-.bg-primary-gradient {
-  background: linear-gradient(90deg, #c9c761 0%, #d2d270 50%, #c9c761 100%);
-}
-
-.bg-button-gradient {
-  background: linear-gradient(90deg, #d2d270 0%, #a8c97a 100%);
-  transition: filter 300ms ease;
-}
-
-.bg-button-gradient:hover {
-  filter: brightness(0.93);
+    0 1px 2px rgba(255, 255, 255, 0.5),
+    0 0 8px rgba(255, 255, 255, 0.35);
 }
 
 html {

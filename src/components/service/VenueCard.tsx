@@ -71,7 +71,7 @@ export const VenueCard: React.FC<VenueCardProps> = ({ item, isImageLeft }) => {
         href={item.buttonLink}
         target="_blank"
         rel="noopener noreferrer"
-        className="mt-6 inline-block w-fit bg-button-gradient px-6 py-2.5 text-sm font-semibold text-dark-black uppercase"
+        className="mt-6 inline-block w-fit bg-black px-6 py-2.5 text-sm font-semibold text-primary transition-opacity duration-300 hover:opacity-90 uppercase"
       >
         {item.buttonText}
       </a>

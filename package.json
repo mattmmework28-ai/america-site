@@ -11,7 +11,8 @@
     "preview": "vite preview",
     "spring": "npx --yes serve . -l 4174",
     "mirror:spring": "node scripts/mirror-spring-page.mjs",
-    "spring:local": "npx --yes serve spring-page -l 4180"
+    "spring:local": "npx --yes serve spring-page -l 4180",
+    "spring:sync": "npm run build && node scripts/sync-spring-page.mjs"
   },
   "dependencies": {
     "@types/canvas-confetti": "^1.9.0",
