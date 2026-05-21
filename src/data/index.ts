@@ -12,9 +12,9 @@ export const serviceItems = [
         description:
           "Born from the ambition, craftsmanship, and enduring spirit that shaped America's financial foundation, 48 Wall Street stands in the heart of Downtown Manhattan as a venue defined by history, grandeur, and timeless significance. Once the prestigious Bank of New York, the space unfolds across three elegant floors with soaring ceilings and beautifully preserved architectural detail, creating a distinguished backdrop for unforgettable corporate gatherings, elevated evening receptions, elegant galas, and meaningful celebrations inspired by heritage, connection, and the tradition of bringing people together.",
         images: [
-          "/service-photo/48 Wall/1.jpg",
-          "/service-photo/48 Wall/2.jpg",
-          "/service-photo/48 Wall/3.jpg",
+          "/service-photo/48 Wall/1.png",
+          "/service-photo/48 Wall/2.png",
+          "/service-photo/48 Wall/3.png",
           "/service-photo/48 Wall/4.png",
         ],
         buttonText: "Learn More",
