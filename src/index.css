@@ -2,18 +2,15 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #0a3161;
-  --color-primary-light: #1e4976;
-  --color-patriot-red: #b22234;
-  --color-patriot-red-dark: #8b1a28;
-  --color-patriot-red-light: #d03449;
-  --color-gold-light: #c9a227;
-  --color-soft-olive: #b8c6dc;
-  --color-soft-olive-dark: #9aadcc;
-  --color-fresh-green: #1e4976;
-  --color-patriot-cream: #faf6f0;
-  --color-patriot-slate: #2d3748;
-  --color-whitesmoke: #f5f7fa;
+  --color-primary: #1b5e20;
+  --color-primary-light: #2e7d32;
+  --color-summer-teal: #00897b;
+  --color-summer-coral: #ff6b6b;
+  --color-gold-light: #d4af37;
+  --color-soft-olive: #d2d270;
+  --color-soft-olive-dark: #c9c761;
+  --color-fresh-green: #a8c97a;
+  --color-whitesmoke: #f5f5f5;
   --color-white: #ffffff;
 
   --color-dark-black: #0a0a0a;
@@ -83,100 +80,16 @@
 }
 
 .bg-primary-gradient {
-  background-image: linear-gradient(
-    90deg,
-    #c96a78 0%,
-    #e8b4ba 20%,
-    #f8f4f4 50%,
-    #9ebde3 80%,
-    #5a84b4 100%
-  );
-  background-size: 400% 100%;
-  background-position: 0% 50%;
-  animation: patriot-gradient-flow 50s ease-in-out infinite;
-  will-change: background-position;
+  background: linear-gradient(90deg, #c9c761 0%, #d2d270 50%, #c9c761 100%);
 }
 
 .bg-button-gradient {
-  background-image: linear-gradient(
-    90deg,
-    #7a1520 0%,
-    #962030 12%,
-    #b22234 25%,
-    #7a2848 37%,
-    #3a4070 50%,
-    #1e4976 62%,
-    #0a3161 75%,
-    #081828 88%,
-    #7a1520 100%
-  );
-  background-size: 300% 100%;
-  background-position: 0% 50%;
-  animation: button-gradient-flow 14s ease-in-out infinite;
-  color: var(--color-white);
-  transition: filter 300ms ease, transform 300ms ease;
-  box-shadow:
-    inset 1px 1px 1px rgba(255, 255, 255, 0.1),
-    inset 0 -1px 2px rgba(0, 0, 0, 0.12),
-    1px 2px 5px rgba(8, 24, 40, 0.22);
-  will-change: background-position;
+  background: linear-gradient(90deg, #d2d270 0%, #a8c97a 100%);
+  transition: filter 300ms ease;
 }
 
 .bg-button-gradient:hover {
-  filter: brightness(1.08);
-}
-
-.text-hero-gradient {
-  display: inline-block;
-  width: 100%;
-  background-image: linear-gradient(
-    90deg,
-    #f0c4c8 0%,
-    #f8e4e6 20%,
-    #ffffff 50%,
-    #dce8f6 80%,
-    #b8d0ec 100%
-  );
-  background-size: 400% 100%;
-  background-position: 0% 50%;
-  animation: patriot-gradient-flow 50s ease-in-out infinite;
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: transparent;
-  -webkit-box-decoration-break: clone;
-  box-decoration-break: clone;
-  will-change: background-position;
-}
-
-@keyframes patriot-gradient-flow {
-  0%,
-  100% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-}
-
-@keyframes button-gradient-flow {
-  0%,
-  100% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .bg-primary-gradient,
-  .bg-button-gradient,
-  .text-hero-gradient {
-    animation: none;
-    background-size: 100% 100%;
-    background-position: 50% 50%;
-  }
+  filter: brightness(0.93);
 }
 
 html {
@@ -188,7 +101,7 @@ html {
 body {
   overflow-x: clip;
   max-width: 100%;
-  background-color: var(--color-patriot-cream);
+  background-color: var(--color-whitesmoke);
 }
 
 #root {

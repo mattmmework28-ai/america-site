@@ -63,7 +63,7 @@ export const VenueCard: React.FC<VenueCardProps> = ({ item, isImageLeft }) => {
         )}
       </a>
 
-      <p className="text-[1.1375rem] font-medium leading-relaxed text-patriot-slate sm:text-base sm:font-normal">
+      <p className="text-sm leading-relaxed text-gray-700 sm:text-base">
         {item.description}
       </p>
 
@@ -71,7 +71,7 @@ export const VenueCard: React.FC<VenueCardProps> = ({ item, isImageLeft }) => {
         href={item.buttonLink}
         target="_blank"
         rel="noopener noreferrer"
-        className="mt-6 inline-block w-fit bg-button-gradient px-6 py-2.5 text-sm font-semibold text-white uppercase"
+        className="mt-6 inline-block w-fit bg-button-gradient px-6 py-2.5 text-sm font-semibold text-dark-black uppercase"
       >
         {item.buttonText}
       </a>
@@ -80,12 +80,12 @@ export const VenueCard: React.FC<VenueCardProps> = ({ item, isImageLeft }) => {
 
   const imageSection = (
     <div className="relative h-[300px] w-full sm:h-[350px] lg:h-full lg:min-h-[400px]">
-      <div className="relative h-full overflow-hidden bg-white">
+      <div className="relative h-full w-full overflow-hidden">
         <AnimatePresence>
           <motion.img
             key={normalizedIndex}
             src={item.images[normalizedIndex]}
-            className="absolute inset-0 h-full w-full object-cover"
+            className="absolute inset-0 h-full w-full min-w-full object-cover object-center"
             alt={`Venue - Image ${normalizedIndex + 1}`}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -105,8 +105,8 @@ export const VenueCard: React.FC<VenueCardProps> = ({ item, isImageLeft }) => {
                 onClick={() => goToImage(idx)}
                 className={`h-2 rounded-full transition-all duration-300 ${
                   idx === normalizedIndex
-                    ? "w-8 bg-patriot-red"
-                    : "w-2 bg-white/50 hover:bg-patriot-red/60"
+                    ? "w-8 bg-primary"
+                    : "w-2 bg-white/50 hover:bg-white/80"
                 }`}
                 aria-label={`Go to image ${idx + 1}`}
               />
@@ -122,12 +122,12 @@ export const VenueCard: React.FC<VenueCardProps> = ({ item, isImageLeft }) => {
       {isImageLeft ? (
         <>
           <div className="order-1 lg:order-2">{contentSection}</div>
-          <div className="order-2 lg:order-1 lg:pr-[50px]">{imageSection}</div>
+          <div className="order-2 lg:order-1">{imageSection}</div>
         </>
       ) : (
         <>
           <div className="order-1 lg:order-1">{contentSection}</div>
-          <div className="order-2 lg:order-2 lg:pl-[50px]">{imageSection}</div>
+          <div className="order-2 lg:order-2">{imageSection}</div>
         </>
       )}
     </div>

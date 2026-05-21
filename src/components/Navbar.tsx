@@ -3,7 +3,7 @@ import React from "react";
 const Navbar: React.FC = () => {
   return (
     <>
-      <nav className="navbar-shell fixed top-0 left-0 right-0 z-50 overflow-hidden border-b border-black/10 bg-[#faf6f0] shadow-sm">
+      <nav className="navbar-shell fixed top-0 left-0 right-0 z-50 overflow-hidden border-b border-black/10 bg-whitesmoke shadow-sm">
         <img
           src="/nav_bg.png"
           alt=""
@@ -21,8 +21,8 @@ const Navbar: React.FC = () => {
             aria-label="Celebrate the Spirit of America — visit FIDI Hospitality"
           >
             <span className="navbar-header-text font-primary flex flex-col px-2 text-center text-[2.1rem] leading-tight tracking-wide sm:px-4 lg:text-[clamp(1.375rem,5.005vw,3.575rem)]">
-              <span className="text-patriot-red-light">Celebrate</span>
-              <span className="text-primary-light">the Spirit of America</span>
+              <span className="text-gold-light">Celebrate</span>
+              <span className="text-white">the Spirit of America</span>
             </span>
           </a>
         </div>

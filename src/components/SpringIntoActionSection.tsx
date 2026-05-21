@@ -9,7 +9,7 @@ export const SpringIntoActionSection: React.FC<
   SpringIntoActionSectionProps
 > = () => {
   return (
-    <section className="border-y border-primary/15 bg-patriot-cream px-4 py-12 sm:px-6 sm:py-16 lg:px-12 lg:py-20">
+    <section className="border-y border-black/10 bg-gray-100 px-4 py-12 sm:px-6 sm:py-16 lg:px-12 lg:py-20">
       <div className="mx-auto max-w-2xl min-w-0 text-center">
         <div className="flex min-w-0 flex-col items-center">
           <DecoratedTitle size="md" as="h2">
@@ -19,7 +19,7 @@ export const SpringIntoActionSection: React.FC<
           </DecoratedTitle>
         </div>
 
-        <div className="mt-6 space-y-3 text-sm leading-relaxed text-patriot-slate sm:text-base">
+        <div className="mt-6 space-y-3 text-sm leading-relaxed text-gray-600 sm:text-base">
           <p>
             America has always been shaped by visionaries, communities, and
             moments shared together. From historic landmarks to meaningful

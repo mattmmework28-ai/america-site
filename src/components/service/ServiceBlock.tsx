@@ -34,7 +34,7 @@ export const ServiceBlock: React.FC<ServiceBlockProps> = ({ data }) => {
         </div>
 
         <div
-          className="mx-auto max-w-4xl min-w-0 break-words text-sm leading-relaxed text-patriot-slate sm:text-base lg:text-lg [overflow-wrap:anywhere]"
+          className="mx-auto max-w-4xl min-w-0 break-words text-sm leading-relaxed text-gray-700 sm:text-base lg:text-lg [overflow-wrap:anywhere]"
           dangerouslySetInnerHTML={{ __html: data.maintext }}
         />
 
@@ -51,7 +51,7 @@ export const ServiceBlock: React.FC<ServiceBlockProps> = ({ data }) => {
           href={data.buttonLink}
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-6 inline-block bg-button-gradient px-8 py-3 text-md font-semibold text-white uppercase lg:mt-8"
+          className="mt-6 inline-block bg-button-gradient px-8 py-3 text-md font-semibold text-dark-black uppercase lg:mt-8"
         >
           {data.ctaButtonText}
         </a>
