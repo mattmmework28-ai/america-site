@@ -8,7 +8,6 @@ const ParallaxSection: React.FC = () => {
         h-[50vh]
         overflow-hidden
         parallax-bg
-        navbar-offset
       "
     >
       <video

@@ -19,19 +19,13 @@
   --color-dark-black: #0a0a0a;
   --font-primary: "Gilda Display", serif;
 
-  --navbar-height: 118px;
-}
-
-@media (min-width: 640px) {
-  :root {
-    --navbar-height: 152px;
-  }
-}
-
-@media (min-width: 1024px) {
-  :root {
-    --navbar-height: 191px;
-  }
+  --navbar-flag-ratio: 5.838;
+  --navbar-text-space: 2.75rem;
+  --navbar-height: min(
+    calc(min(100vw, 1920px) / var(--navbar-flag-ratio) + var(--navbar-text-space)),
+    191px
+  );
+  --navbar-total-height: calc(var(--navbar-height) + 2px);
 }
 
 .navbar-shell {
@@ -42,8 +36,17 @@
   top: var(--navbar-height);
 }
 
+.navbar-spacer {
+  height: var(--navbar-total-height);
+}
+
 .navbar-offset {
-  margin-top: calc(var(--navbar-height) + 2px);
+  margin-top: var(--navbar-total-height);
+}
+
+.navbar-header-text span {
+  paint-order: stroke fill;
+  -webkit-text-stroke: 0.075em #ffffff;
 }
 
 .bg-primary-gradient {
