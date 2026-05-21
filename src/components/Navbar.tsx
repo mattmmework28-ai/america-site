@@ -19,8 +19,8 @@ const Navbar: React.FC = () => {
             aria-label="Celebrate the Spirit of America — visit FIDI Hospitality"
           >
             <span className="navbar-header-text font-primary flex flex-col px-2 text-center text-[2.1rem] leading-tight tracking-wide sm:px-4 lg:text-[clamp(1.375rem,5.005vw,3.575rem)]">
-              <span className="text-patriot-red">Celebrate</span>
-              <span className="text-primary">the Spirit of America</span>
+              <span className="text-patriot-red-light">Celebrate</span>
+              <span className="text-primary-light">the Spirit of America</span>
             </span>
           </a>
         </div>
