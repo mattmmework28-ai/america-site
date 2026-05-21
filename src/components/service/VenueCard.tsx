@@ -46,24 +46,24 @@ export const VenueCard: React.FC<VenueCardProps> = ({ item, isImageLeft }) => {
   const logoHeight = item.logoHeight || DEFAULT_SECTION_LOGO_HEIGHT;
 
   const contentSection = (
-    <div className="flex w-full flex-col justify-center bg-white p-6 sm:p-8 lg:p-10 xl:p-12">
+    <div className="flex w-full min-w-0 flex-col justify-center bg-white p-6 sm:p-8 lg:p-10 xl:p-12">
       <a className="mb-4 lg:mb-6 block" href={item.buttonLink}>
         {item.logo ? (
           <img
             src={item.logo}
             alt="Venue logo"
-            className={`w-auto object-contain ${logoHeight}`}
+            className={`max-w-full w-auto object-contain ${logoHeight}`}
           />
         ) : (
           <DecoratedTitle size="md" align="left" as="h3">
-            <span className="text-xl font-bold text-gray-900 sm:text-2xl lg:text-3xl">
+            <span className="text-xl font-bold text-primary sm:text-2xl lg:text-3xl">
               {item.logo_text}
             </span>
           </DecoratedTitle>
         )}
       </a>
 
-      <p className="text-sm leading-relaxed text-gray-700 sm:text-base">
+      <p className="text-[1.1375rem] font-medium leading-relaxed text-patriot-slate sm:text-base sm:font-normal">
         {item.description}
       </p>
 
@@ -71,7 +71,7 @@ export const VenueCard: React.FC<VenueCardProps> = ({ item, isImageLeft }) => {
         href={item.buttonLink}
         target="_blank"
         rel="noopener noreferrer"
-        className="mt-6 inline-block w-fit bg-button-gradient px-6 py-2.5 text-sm font-semibold text-dark-black uppercase"
+        className="mt-6 inline-block w-fit bg-button-gradient px-6 py-2.5 text-sm font-semibold text-primary uppercase"
       >
         {item.buttonText}
       </a>
@@ -105,8 +105,8 @@ export const VenueCard: React.FC<VenueCardProps> = ({ item, isImageLeft }) => {
                 onClick={() => goToImage(idx)}
                 className={`h-2 rounded-full transition-all duration-300 ${
                   idx === normalizedIndex
-                    ? "w-8 bg-primary"
-                    : "w-2 bg-white/50 hover:bg-white/80"
+                    ? "w-8 bg-patriot-red"
+                    : "w-2 bg-white/50 hover:bg-patriot-red/60"
                 }`}
                 aria-label={`Go to image ${idx + 1}`}
               />
@@ -118,7 +118,7 @@ export const VenueCard: React.FC<VenueCardProps> = ({ item, isImageLeft }) => {
   );
 
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2">
+    <div className="grid min-w-0 grid-cols-1 lg:grid-cols-2">
       {isImageLeft ? (
         <>
           <div className="order-1 lg:order-2">{contentSection}</div>
@@ -127,7 +127,7 @@ export const VenueCard: React.FC<VenueCardProps> = ({ item, isImageLeft }) => {
       ) : (
         <>
           <div className="order-1 lg:order-1">{contentSection}</div>
-          <div className="order-2 lg:order-2 lg:pl-[120px]">{imageSection}</div>
+          <div className="order-2 lg:order-2 lg:pl-[50px]">{imageSection}</div>
         </>
       )}
     </div>

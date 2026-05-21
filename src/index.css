@@ -2,15 +2,18 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #1B5E20;
-  --color-primary-light: #2E7D32;
-  --color-summer-teal: #00897B;
-  --color-summer-coral: #FF6B6B;
-  --color-gold-light: #D4AF37;
-  --color-soft-olive: #D2D270;
-  --color-soft-olive-dark: #c9c761;
-  --color-fresh-green: #A8C97A;
-  --color-whitesmoke: #f5f5f5;
+  --color-primary: #0a3161;
+  --color-primary-light: #1e4976;
+  --color-patriot-red: #b22234;
+  --color-patriot-red-dark: #8b1a28;
+  --color-patriot-red-light: #d03449;
+  --color-gold-light: #c9a227;
+  --color-soft-olive: #b8c6dc;
+  --color-soft-olive-dark: #9aadcc;
+  --color-fresh-green: #1e4976;
+  --color-patriot-cream: #faf6f0;
+  --color-patriot-slate: #2d3748;
+  --color-whitesmoke: #f5f7fa;
   --color-white: #ffffff;
 
   --color-dark-black: #0a0a0a;
@@ -18,20 +21,108 @@
 }
 
 .bg-primary-gradient {
-  background: linear-gradient(90deg, #c9c761 0%, #d2d270 50%, #c9c761 100%);
+  background-image: linear-gradient(
+    90deg,
+    var(--color-patriot-red) 0%,
+    var(--color-patriot-red-light) 12%,
+    var(--color-white) 25%,
+    #a8c8eb 37%,
+    var(--color-primary-light) 50%,
+    #a8c8eb 63%,
+    var(--color-white) 75%,
+    var(--color-patriot-red-light) 88%,
+    var(--color-patriot-red) 100%
+  );
+  background-size: 200% 100%;
+  background-position: 0% 50%;
+  animation: patriot-gradient-flow 12s linear infinite;
+  will-change: background-position;
 }
 
 .bg-button-gradient {
-  background: linear-gradient(90deg, #d2d270 0%, #a8c97a 100%);
-  transition: filter 300ms ease;
+  background: linear-gradient(
+    120deg,
+    #f5b4bc 0%,
+    #f8ccd1 10%,
+    #fce3e6 20%,
+    #faf6f0 30%,
+    #f3f6fb 40%,
+    #e8eef8 50%,
+    #dce7f5 60%,
+    #d0dff2 70%,
+    #c4d7ef 80%,
+    #b8cfea 90%,
+    #acc7e6 100%
+  );
+  transition: filter 300ms ease, transform 300ms ease;
+  box-shadow: 0 1px 4px rgba(10, 49, 97, 0.1);
 }
 
 .bg-button-gradient:hover {
-  filter: brightness(0.93);
+  filter: brightness(1.04) saturate(1.08);
+}
+
+.text-hero-gradient {
+  display: inline-block;
+  width: 100%;
+  background-image: linear-gradient(
+    90deg,
+    #f0aeb6 0%,
+    #f6c8ce 12%,
+    #ffffff 25%,
+    #e8f1fb 37%,
+    #94bce8 50%,
+    #e8f1fb 63%,
+    #ffffff 75%,
+    #f6c8ce 88%,
+    #f0aeb6 100%
+  );
+  background-size: 200% 100%;
+  background-position: 0% 50%;
+  animation: patriot-gradient-flow 12s linear infinite;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  will-change: background-position;
+}
+
+@keyframes patriot-gradient-flow {
+  from {
+    background-position: 0% 50%;
+  }
+  to {
+    background-position: 200% 50%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bg-primary-gradient,
+  .text-hero-gradient {
+    animation: none;
+    background-size: 100% 100%;
+    background-position: 50% 50%;
+  }
 }
 
 html {
   scroll-behavior: smooth;
+  overflow-x: clip;
+  max-width: 100%;
+}
+
+body {
+  overflow-x: clip;
+  max-width: 100%;
+  background-color: var(--color-patriot-cream);
+}
+
+#root {
+  overflow-x: clip;
+  max-width: 100%;
+  min-width: 0;
 }
 
 * {

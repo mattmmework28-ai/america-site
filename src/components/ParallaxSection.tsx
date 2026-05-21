@@ -8,7 +8,7 @@ const ParallaxSection: React.FC = () => {
         h-[50vh]
         overflow-hidden
         parallax-bg
-        mt-28
+        mt-[153px]
       "
     >
       <video
@@ -22,11 +22,16 @@ const ParallaxSection: React.FC = () => {
         <source src="/videos/video.mp4" type="video/mp4" />
       </video>
 
-      <div className="relative z-10 h-full flex items-center justify-center px-6 sm:px-10 lg:px-16">
-        <h2 className="text-white text-center font-light tracking-wide drop-shadow-xl uppercase font-primary text-xl sm:text-2xl md:text-3xl lg:text-4xl max-w-7xl leading-relaxed">
-          Where meaningful gatherings come to life with strategic precision,
-          seamless execution, and lasting impact.
-        </h2>
+      <div className="relative z-10 flex h-full items-center justify-center px-6 sm:px-10 lg:px-16">
+        <div className="mx-auto max-w-3xl space-y-4 text-center [filter:drop-shadow(0_1px_3px_rgba(0,0,0,0.45))]">
+          <p className="text-hero-gradient font-primary text-[1.35rem] font-light leading-relaxed tracking-wide sm:text-[1.5rem] md:text-[1.8rem] lg:text-[2.25rem]">
+            Where timeless gatherings are brought to life through history,
+            craftsmanship, connection, and unforgettable experiences.
+          </p>
+          <p className="text-hero-gradient font-primary text-[1.2rem] font-light leading-relaxed tracking-wide sm:text-[1.35rem] md:text-[1.5rem] lg:text-[1.8rem]">
+            Honoring tradition. Creating moments. Bringing people together.
+          </p>
+        </div>
       </div>
     </section>
   );

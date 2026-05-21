@@ -39,7 +39,7 @@ const Flourish: React.FC<FlourishProps> = ({ heightClass, mirrored = false }) =>
     alt=""
     aria-hidden="true"
     draggable={false}
-    className={`${heightClass} w-auto shrink-0 object-contain select-none ${
+    className={`${heightClass} max-w-[min(112px,33vw)] w-auto shrink-0 object-contain select-none sm:max-w-none ${
       mirrored ? "-scale-x-100" : ""
     }`}
   />
@@ -56,10 +56,10 @@ export const DecoratedTitle: React.FC<DecoratedTitleProps> = ({
 
   return (
     <div
-      className={`flex w-full items-center ${ALIGN[align]} ${GAP_TO_TITLE[size]} ${className}`}
+      className={`flex w-full min-w-0 items-center ${ALIGN[align]} ${GAP_TO_TITLE[size]} ${className}`}
     >
       <Flourish heightClass={heightClass} />
-      <Tag className="text-center">{children}</Tag>
+      <Tag className="min-w-0 max-w-full text-center">{children}</Tag>
       <Flourish heightClass={heightClass} mirrored />
     </div>
   );

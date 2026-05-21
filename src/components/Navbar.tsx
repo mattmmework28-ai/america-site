@@ -10,26 +10,26 @@ const Navbar: React.FC = () => {
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
-          height: "112px",
+          height: "151px",
         }}
       >
         <div className="flex h-full items-center justify-center px-6">
           <a
             href="https://www.fidihospitality.com/"
-            className="flex items-center"
+            className="flex h-full w-full max-w-[1920px] items-center justify-center focus:outline-none focus-visible:ring-2 focus-visible:ring-white/80 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent"
+            aria-label="Celebrate the Spirit of America — visit FIDI Hospitality"
           >
-            <img
-              src="/logo.png"
-              alt="Summer Celebrations Begin Here"
-              className="h-18 md:h-22 xl:h-26 w-auto"
-            />
+            <span className="font-primary flex flex-col px-4 text-center text-[clamp(1.43rem,4.55vw,3.25rem)] leading-tight tracking-wide">
+              <span className="text-patriot-red">Celebrate</span>
+              <span className="text-primary">the Spirit of America</span>
+            </span>
           </a>
         </div>
       </nav>
 
       <div
         className="fixed left-0 right-0 z-10 h-0.5 bg-primary-gradient"
-        style={{ top: "112px" }}
+        style={{ top: "151px" }}
       />
     </>
   );

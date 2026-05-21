@@ -16,17 +16,17 @@ export const ServiceBlock: React.FC<ServiceBlockProps> = ({ data }) => {
 
   return (
     <div>
-      <div className="bg-gray-50 px-4 py-4 text-center sm:px-6 sm:py-8 lg:px-12 lg:py-12">
+      <div className="bg-whitesmoke px-4 py-4 text-center sm:px-6 sm:py-8 lg:px-12 lg:py-12">
         <div className="mb-6 flex justify-center lg:mb-8">
           {data.logo ? (
             <img
               src={data.logo}
               alt="Company logo"
-              className={`w-auto object-contain ${logoHeight}`}
+              className={`max-w-full w-auto object-contain ${logoHeight}`}
             />
           ) : (
             <DecoratedTitle size="lg" as="h2">
-              <span className="text-2xl font-bold text-gray-900 sm:text-3xl lg:text-4xl">
+              <span className="text-2xl font-bold text-primary sm:text-3xl lg:text-4xl">
                 {data.logo_text}
               </span>
             </DecoratedTitle>
@@ -34,22 +34,24 @@ export const ServiceBlock: React.FC<ServiceBlockProps> = ({ data }) => {
         </div>
 
         <div
-          className="mx-auto max-w-4xl text-sm leading-relaxed text-gray-700 sm:text-base lg:text-lg"
+          className="mx-auto max-w-4xl min-w-0 break-words text-sm leading-relaxed text-patriot-slate sm:text-base lg:text-lg [overflow-wrap:anywhere]"
           dangerouslySetInnerHTML={{ __html: data.maintext }}
         />
 
-        <p className="mx-auto mt-6 max-w-3xl text-sm sm:text-base lg:mt-8 lg:text-lg">
-          <span className="font-semibold text-gray-900">
-            {data.ctaText.split(",")[0]},
-          </span>
-          {data.ctaText.split(",").slice(1).join(",")}
-        </p>
+        {data.ctaText ? (
+          <p className="mx-auto mt-6 max-w-3xl min-w-0 break-words text-sm sm:text-base lg:mt-8 lg:text-lg [overflow-wrap:anywhere]">
+            <span className="font-semibold text-primary">
+              {data.ctaText.split(",")[0]},
+            </span>
+            {data.ctaText.split(",").slice(1).join(",")}
+          </p>
+        ) : null}
 
         <a
           href={data.buttonLink}
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-6 inline-block bg-button-gradient px-8 py-3 text-md font-semibold text-dark-black uppercase lg:mt-8"
+          className="mt-6 inline-block bg-button-gradient px-8 py-3 text-md font-semibold text-primary uppercase lg:mt-8"
         >
           {data.ctaButtonText}
         </a>

@@ -6,7 +6,7 @@ import ServiceBlock from "./service/ServiceBlock";
 
 export const ServiceSection: React.FC<ServiceSectionProps> = ({ items }) => {
   return (
-    <section className="max-w-7xl mx-auto border-[0.5px] border-soft-olive border-t-0">
+    <section className="mx-auto w-full min-w-0 max-w-7xl border-[0.5px] border-soft-olive border-t-0">
       {items.map((serviceData, index) => (
         <ServiceBlock key={index} data={serviceData} />
       ))}

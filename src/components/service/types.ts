@@ -14,7 +14,7 @@ export interface ServiceData {
   logo_text?: string;
   logoHeight?: string;
   maintext: string;
-  ctaText: string;
+  ctaText?: string;
   ctaButtonText: string;
   buttonLink: string;
   section: SectionItem[];
