@@ -6,7 +6,7 @@ const Navbar: React.FC = () => {
       <nav
         className="fixed top-0 left-0 right-0 z-50 border-b border-black/10 shadow-sm"
         style={{
-          backgroundColor: "#000",
+          backgroundColor: "#faf6f0",
           backgroundImage: "url('/nav_bg.png')",
           backgroundSize: "cover",
           backgroundPosition: "center",
