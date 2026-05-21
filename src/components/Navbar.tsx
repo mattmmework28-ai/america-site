@@ -11,6 +11,7 @@ const Navbar: React.FC = () => {
           decoding="async"
           className="pointer-events-none absolute inset-x-0 bottom-0 mx-auto block h-full w-full max-w-[1920px] object-cover object-bottom"
         />
+        <div className="navbar-flag-overlay pointer-events-none absolute inset-0 z-[1]" aria-hidden />
         <div className="absolute inset-x-0 top-0 z-10 flex justify-center px-3 pt-1.5 sm:px-6 sm:pt-2">
           <a
             href="https://www.fidihospitality.com/"
