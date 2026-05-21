@@ -8,7 +8,8 @@
     "build": "node scripts/check-assets.mjs && tsc -b && vite build",
     "check:assets": "node scripts/check-assets.mjs",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "spring": "npx --yes serve . -l 4174"
   },
   "dependencies": {
     "@types/canvas-confetti": "^1.9.0",
