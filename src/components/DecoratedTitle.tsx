@@ -39,7 +39,7 @@ const Flourish: React.FC<FlourishProps> = ({ heightClass, mirrored = false }) =>
     alt=""
     aria-hidden="true"
     draggable={false}
-    className={`${heightClass} max-w-[min(104px,26vw)] w-auto shrink-0 object-contain select-none sm:max-w-none ${
+    className={`${heightClass} max-w-[min(80px,22vw)] w-auto shrink-0 object-contain select-none sm:max-w-none ${
       mirrored ? "-scale-x-100" : ""
     }`}
   />
