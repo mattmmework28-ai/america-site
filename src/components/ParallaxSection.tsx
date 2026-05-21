@@ -8,7 +8,7 @@ const ParallaxSection: React.FC = () => {
         h-[50vh]
         overflow-hidden
         parallax-bg
-        mt-[168px]
+        mt-[176px]
       "
     >
       <video
