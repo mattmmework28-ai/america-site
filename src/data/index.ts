@@ -1,7 +1,7 @@
 export const serviceItems = [
   {
     logo: "/logo/logo.png",
-    logoHeight: "h-20 sm:h-24 lg:h-28",
+    logoHeight: "h-[4.75rem] sm:h-[5.7rem] lg:h-[6.65rem]",
     maintext:
       "Where history becomes the backdrop for extraordinary experiences.<br/><br/>With over 15 years of hospitality expertise, FIDI Hospitality proudly opens the doors to iconic venues rich with character, architecture, and timeless significance.<br/><br/>Every gathering deserves a setting that inspires. Whether planning an executive reception, private celebration, milestone event, or elevated social gathering, our venues offer distinctive environments designed to leave a lasting impression.<br/><br/>Steeped in history and elevated through thoughtful service, each destination reflects the spirit of timeless American hospitality.",
     ctaButtonText: "Ready to host something unforgettable?",
