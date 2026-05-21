@@ -20,12 +20,27 @@
   --font-primary: "Gilda Display", serif;
 
   --navbar-flag-ratio: 5.838;
-  --navbar-text-space: 2.75rem;
   --navbar-height: min(
     calc(min(100vw, 1920px) / var(--navbar-flag-ratio) + var(--navbar-text-space)),
     191px
   );
   --navbar-total-height: calc(var(--navbar-height) + 2px);
+}
+
+:root {
+  --navbar-text-space: 5.5rem;
+}
+
+@media (min-width: 640px) {
+  :root {
+    --navbar-text-space: 3rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --navbar-text-space: 3.025rem;
+  }
 }
 
 .navbar-shell {
