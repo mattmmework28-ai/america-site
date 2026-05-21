@@ -5,7 +5,7 @@ const Navbar: React.FC = () => {
     <>
       <nav
         className="fixed top-0 left-0 right-0 z-50 overflow-hidden border-b border-black/10 bg-[#faf6f0] shadow-sm"
-        style={{ height: "151px" }}
+        style={{ height: "166px" }}
       >
         <img
           src="/nav_bg.png"
@@ -30,7 +30,7 @@ const Navbar: React.FC = () => {
 
       <div
         className="fixed left-0 right-0 z-10 h-0.5 bg-primary-gradient"
-        style={{ top: "151px" }}
+        style={{ top: "166px" }}
       />
     </>
   );
